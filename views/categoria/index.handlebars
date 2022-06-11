@@ -1,0 +1,15 @@
+<h2>Categorias:</h2>
+
+{{#each categorias}}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h3>{{nome}}</h3>
+            <div class="dropdown dropend">
+                <a href="/categoria/{{slug}}"><button class="btn-sm btn-warning dropdown-toggle">Ver Postagens</button></a>
+            </div>          
+        </div>
+    </div>
+
+{{else}}
+    <h5 class="mt-3">Nenhuma Categoria Registrada</h5>
+{{/each}}

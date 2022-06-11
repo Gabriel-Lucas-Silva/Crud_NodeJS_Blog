@@ -1,0 +1,22 @@
+<h1>{{categoria.nome}}</h1>
+
+<hr>
+
+<h2>Últimas Postagens:</h2>
+
+{{#each postagens}}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h3>{{titulo}}</h3>
+            <h6>{{descricao}}</h6>
+            <div class="dropdown dropend">
+                <a href="/postagem/{{slug}}"><button class="btn-sm btn-warning dropdown-toggle">Leia Mais</button></a>
+            </div>
+            <hr class="mt-4 mb-0">
+            <small>Criado em {{data}}</small>
+        </div>
+    </div>
+
+{{else}}
+    <h5 class="mt-3">Nenhuma Postagem Registrada</h5>
+{{/each}}

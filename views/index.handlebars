@@ -1,0 +1,27 @@
+<div class="mt-4 p-5 bg-light text-black rounded">
+  <h1 class="display-4">Seja Bem-Vindo</h1>
+  <p>Lorem ipsum...</p>
+  <a href="/usuario/registro" class="justify-center"><button class="btn btn-outline-success">Crie uma Conta</button></a>
+</div>
+
+<hr>
+
+<h2>Últimas Postagens:</h2>
+
+{{#each postagens}}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h3>{{titulo}}</h3>
+            <h6>{{descricao}}</h6>
+            <div class="dropdown dropend">
+                <a href="/postagem/{{slug}}"><button class="btn-sm btn-warning dropdown-toggle">Leia Mais</button></a>
+            </div>
+            <hr class="mt-4 mb-0">
+            <small>Categoria: {{categoria.nome}}</small><br>
+            <small>Criado em {{data}}</small>
+        </div>
+    </div>
+
+{{else}}
+    <h5 class="mt-3">Nenhuma Postagem Registrada</h5>
+{{/each}}
